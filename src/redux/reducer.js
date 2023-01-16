@@ -43,17 +43,17 @@ const filterReducer = (state = filtersInitialState, action) => {
   }
 };
 
-export const rootReducer = (state = {}, action) => {
-  return {
-    tasks: tasksReducer(state.tasks, action),
-    filters: filterReducer(state.filters, action),
-  };
-};
+// export const rootReducer = (state = {}, action) => {
+//   return {
+//     tasks: tasksReducer(state.tasks, action),
+//     filters: filterReducer(state.filters, action),
+//   };
+// };
 
-// export const rootReducer = combineReducers({
-//   tasks: tasksReducer,
-//   filter: filterReducer,
-// });
+export const rootReducer = combineReducers({
+  tasks: tasksReducer,
+  filters: filterReducer,
+});
 
 // const initialState = {
 //   tasks: [
