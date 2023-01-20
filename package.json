@@ -1,9 +1,10 @@
 {
-  "name": "goit-react-textbook-lesson-11-example-app",
+  "name": "redux-test",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "homepage": "https://anatoliistepanovlikhoi.github.io/Redux-test/",
   "dependencies": {
     "@redux-devtools/extension": "3.2.3",
     "clsx": "1.2.1",
