@@ -1,9 +1,9 @@
 import { statusFilters } from './constants';
 // import { combineReducers } from 'redux';
 import {
-  addTask,
-  deleteTask,
-  toggleCompleted,
+  // addTask,
+  // deleteTask,
+  // toggleCompleted,
   setStatusFilter,
 } from './actions';
 import { createReducer } from '@reduxjs/toolkit';
