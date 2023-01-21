@@ -34,20 +34,42 @@ const tasksInitialState = [
 //   }
 // };
 
+//without Immer
+
+// export const tasksReducer = createReducer(tasksInitialState, {
+//   [addTask]: (state, action) => {
+//     return [...state, action.payload];
+//   },
+//   [deleteTask]: (state, action) => {
+//     return state.filter(task => task.id !== action.payload);
+//   },
+//   [toggleCompleted]: (state, action) => {
+//     return state.map(task => {
+//       if (task.id !== action.payload) {
+//         return task;
+//       }
+//       return { ...task, completed: !task.completed };
+//     });
+//   },
+// });
+
+//with Immer
+
 export const tasksReducer = createReducer(tasksInitialState, {
   [addTask]: (state, action) => {
-    return [...state, action.payload];
+    state.push(action.payload);
   },
   [deleteTask]: (state, action) => {
+    // const index = state.findIndex(task => task.id === action.payload);
+    // state.splice(index, 1);
     return state.filter(task => task.id !== action.payload);
   },
   [toggleCompleted]: (state, action) => {
-    return state.map(task => {
-      if (task.id !== action.payload) {
-        return task;
+    for (const task of state) {
+      if (task.id === action.payload) {
+        task.completed = !task.completed;
       }
-      return { ...task, completed: !task.completed };
-    });
+    }
   },
 });
 
@@ -69,10 +91,11 @@ const filtersInitialState = {
 
 export const filterReducer = createReducer(filtersInitialState, {
   [setStatusFilter]: (state, action) => {
-    return {
-      ...state,
-      status: action.payload,
-    };
+    state.status = action.payload;
+    // return {
+    //   ...state,
+    //   status: action.payload,
+    // };
   },
 });
 
