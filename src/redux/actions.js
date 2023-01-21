@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 
 import { createAction } from '@reduxjs/toolkit';
 
@@ -13,15 +13,15 @@ import { createAction } from '@reduxjs/toolkit';
 //   };
 // };
 
-export const addTask = createAction('tasks/addTask', text => {
-  return {
-    payload: {
-      text,
-      id: nanoid(),
-      completed: false,
-    },
-  };
-});
+// export const addTask = createAction('tasks/addTask', text => {
+//   return {
+//     payload: {
+//       text,
+//       id: nanoid(),
+//       completed: false,
+//     },
+//   };
+// });
 
 // export const deleteTask = taskId => {
 //   return {
@@ -30,7 +30,7 @@ export const addTask = createAction('tasks/addTask', text => {
 //   };
 // };
 
-export const deleteTask = createAction('tasks/deleteTask');
+// export const deleteTask = createAction('tasks/deleteTask');
 
 // export const toggleCompleted = taskId => {
 //   return {
@@ -39,7 +39,7 @@ export const deleteTask = createAction('tasks/deleteTask');
 //   };
 // };
 
-export const toggleCompleted = createAction('tasks/toggleCompleted');
+// export const toggleCompleted = createAction('tasks/toggleCompleted');
 
 // export const setStatusFilter = value => {
 //   return {

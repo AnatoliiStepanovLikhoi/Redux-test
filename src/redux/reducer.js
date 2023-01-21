@@ -8,7 +8,7 @@ import {
 } from './actions';
 import { createReducer } from '@reduxjs/toolkit';
 
-const tasksInitialState = [
+export const tasksInitialState = [
   { id: 0, text: 'Learn HTML and CSS', completed: true },
   { id: 1, text: 'Get good at JavaScript', completed: true },
   { id: 2, text: 'Master React', completed: false },
@@ -55,23 +55,23 @@ const tasksInitialState = [
 
 //with Immer
 
-export const tasksReducer = createReducer(tasksInitialState, {
-  [addTask]: (state, action) => {
-    state.push(action.payload);
-  },
-  [deleteTask]: (state, action) => {
-    // const index = state.findIndex(task => task.id === action.payload);
-    // state.splice(index, 1);
-    return state.filter(task => task.id !== action.payload);
-  },
-  [toggleCompleted]: (state, action) => {
-    for (const task of state) {
-      if (task.id === action.payload) {
-        task.completed = !task.completed;
-      }
-    }
-  },
-});
+// export const tasksReducer = createReducer(tasksInitialState, {
+//   [addTask]: (state, action) => {
+//     state.push(action.payload);
+//   },
+//   [deleteTask]: (state, action) => {
+//     // const index = state.findIndex(task => task.id === action.payload);
+//     // state.splice(index, 1);
+//     return state.filter(task => task.id !== action.payload);
+//   },
+//   [toggleCompleted]: (state, action) => {
+//     for (const task of state) {
+//       if (task.id === action.payload) {
+//         task.completed = !task.completed;
+//       }
+//     }
+//   },
+// });
 
 const filtersInitialState = {
   status: statusFilters.all,

@@ -4,7 +4,8 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 // import { rootReducer } from './reducer';
-import { tasksReducer, filterReducer } from './reducer';
+import { filterReducer } from './reducer';
+import { tasksReducer } from './tasksSlice';
 
 // const initialState = {
 //   tasks: [
