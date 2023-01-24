@@ -4,7 +4,7 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 // import { rootReducer } from './reducer';
-import { filterReducer } from './reducer';
+import { filtersReducer } from './filterSlice';
 import { tasksReducer } from './tasksSlice';
 
 // const initialState = {
@@ -27,7 +27,7 @@ import { tasksReducer } from './tasksSlice';
 export const store = configureStore({
   reducer: {
     tasks: tasksReducer,
-    filters: filterReducer,
+    filters: filtersReducer,
   },
 });
 

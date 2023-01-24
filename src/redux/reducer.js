@@ -1,20 +1,20 @@
-import { statusFilters } from './constants';
-// import { combineReducers } from 'redux';
-import {
-  // addTask,
-  // deleteTask,
-  // toggleCompleted,
-  setStatusFilter,
-} from './actions';
-import { createReducer } from '@reduxjs/toolkit';
+// import { statusFilters } from './constants';
+// // import { combineReducers } from 'redux';
+// import {
+//   // addTask,
+//   // deleteTask,
+//   // toggleCompleted,
+//   setStatusFilter,
+// } from './actions';
+// import { createReducer } from '@reduxjs/toolkit';
 
-export const tasksInitialState = [
-  { id: 0, text: 'Learn HTML and CSS', completed: true },
-  { id: 1, text: 'Get good at JavaScript', completed: true },
-  { id: 2, text: 'Master React', completed: false },
-  { id: 3, text: 'Discover Redux', completed: false },
-  { id: 4, text: 'Build amazing apps', completed: false },
-];
+// export const tasksInitialState = [
+//   { id: 0, text: 'Learn HTML and CSS', completed: true },
+//   { id: 1, text: 'Get good at JavaScript', completed: true },
+//   { id: 2, text: 'Master React', completed: false },
+//   { id: 3, text: 'Discover Redux', completed: false },
+//   { id: 4, text: 'Build amazing apps', completed: false },
+// ];
 
 // export const tasksReducer = (state = tasksInitialState, action) => {
 //   switch (action.type) {
@@ -73,9 +73,9 @@ export const tasksInitialState = [
 //   },
 // });
 
-const filtersInitialState = {
-  status: statusFilters.all,
-};
+// const filtersInitialState = {
+//   status: statusFilters.all,
+// };
 
 // export const filterReducer = (state = filtersInitialState, action) => {
 //   switch (action.type) {
@@ -89,15 +89,15 @@ const filtersInitialState = {
 //   }
 // };
 
-export const filterReducer = createReducer(filtersInitialState, {
-  [setStatusFilter]: (state, action) => {
-    state.status = action.payload;
-    // return {
-    //   ...state,
-    //   status: action.payload,
-    // };
-  },
-});
+// export const filterReducer = createReducer(filtersInitialState, {
+//   [setStatusFilter]: (state, action) => {
+//     state.status = action.payload;
+//     // return {
+//     //   ...state,
+//     //   status: action.payload,
+//     // };
+//   },
+// });
 
 // export const rootReducer = combineReducers({
 //   tasks: tasksReducer,

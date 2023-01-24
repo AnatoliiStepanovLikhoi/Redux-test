@@ -1,6 +1,6 @@
 // import { nanoid } from 'nanoid';
 
-import { createAction } from '@reduxjs/toolkit';
+// import { createAction } from '@reduxjs/toolkit';
 
 // export const addTask = text => {
 //   return {
@@ -48,4 +48,4 @@ import { createAction } from '@reduxjs/toolkit';
 //   };
 // };
 
-export const setStatusFilter = createAction('filter/setStatusFilter');
+// export const setStatusFilter = createAction('filter/setStatusFilter');
