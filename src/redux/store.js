@@ -2,10 +2,25 @@
 // import { devToolsEnhancer } from '@redux-devtools/extension';
 // import { rootReducer } from './reducer';
 
-import { configureStore } from '@reduxjs/toolkit';
+import {
+  configureStore,
+  // getDefaultMiddleware
+} from '@reduxjs/toolkit';
 // import { rootReducer } from './reducer';
 import { filtersReducer } from './filterSlice';
 import { tasksReducer } from './tasksSlice';
+// import {
+//   persistStore,
+//   persistReducer,
+//   FLUSH,
+//   REHYDRATE,
+//   PAUSE,
+//   PERSIST,
+//   PURGE,
+//   REGISTER,
+// } from 'redux-persist';
+
+// import storage from
 
 // const initialState = {
 //   tasks: [
